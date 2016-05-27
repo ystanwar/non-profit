@@ -8,8 +8,8 @@ $mail->SMTPDebug = 1;                               // Enable verbose debug outp
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host ='smtp.gmail.com'   ;	                      // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = '14bce138@nirmauni.ac.in';                 // SMTP username
-$mail->Password = 'YuvrajSTanwar@512';                           // SMTP password
+$mail->Username = '';                 // SMTP username
+$mail->Password = '';                           // SMTP password
 
 //$email=$_POST["email"];
 //$pass=$_POST["password"];
