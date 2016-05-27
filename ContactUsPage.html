@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CONTACT</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	 <script src="http://maps.googleapis.com/maps/api/js"></script>
+	 <script src="js/modernizr.js"></script>
+	 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style type="text/css">
+		 
+   .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+   }
+
+
+    .btn:hover, .btn:focus {
+       border: 1px solid #333;
+       background-color: #fff;
+       color: #000;
+   }
+		.container .row .Contacttitle{
+			background: #358CCE;
+			color: #FFF;
+		}
+		.Contacttitle-sm{
+			padding-top: 24px;
+			padding-bottom: 24px; }
+		.Contacttitle small {
+			color: #FFF;
+		}
+		.h1 {
+			margin: 0px;
+		}
+		.h1 small {
+			font-size: 24px;
+		}
+		#googleMap {
+			//margin: 0px;
+			width: 100%; 
+			height: 400px; 
+		}
+		
+		.panel {
+			font-size: 30px;
+			background: #358CCE;
+			color: #FFF;
+			width: 30%;
+			margin-top: 10px;
+			margin-left: 3px:
+		}
+		.panel small{
+			color: #FFF;
+			font-size: 15px;
+		}
+		
+		.navbar {
+			margin-bottom: 0;
+			background-color: #2d2d30;
+			border: 0;
+			font-size: 11px !important;
+			letter-spacing: 4px;
+			opacity:0.9;
+			overflow:visible;
+			z-index:1;
+		}
+
+
+		.navbar li a, .navbar .navbar-brand { 
+			color: #d5d5d5 !important;
+		}
+
+
+		.navbar-nav li a:hover {
+			color: #fff !important;
+		}
+
+
+		.navbar-nav li.active a {
+			color: #fff !important;
+			background-color:#29292c !important;
+		}
+
+
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+		}
+
+
+		.open .dropdown-toggle {
+			color: #fff ;
+			background-color: #555 !important;
+		}
+
+
+		.dropdown-menu li a {
+			color: #000 !important;
+		}
+
+
+		.dropdown-menu li a:hover {
+			background-color: red !important;
+		}
+
+		  footer {
+			 background-color: #2d2d30;
+			 color: #f5f5f5;
+			 padding: 32px;
+		 }
+
+		 footer a {
+			 color: #f5f5f5;
+		 }
+
+		 footer a:hover {
+			 color: #777;
+			 text-decoration: none;
+		 }
+    </style>
+	<script>
+		var myCenter=new google.maps.LatLng(23.1281,72.5444);
+		var marker;
+
+		function initialize()
+		{
+		var mapProp = {
+		  center:myCenter,
+		  zoom:12,
+		  scrollwheel:false,
+		  draggable:false,
+		  mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+		var marker=new google.maps.Marker({
+		  position:myCenter,
+		  animation:google.maps.Animation.BOUNCE
+		  });
+
+		marker.setMap(map);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<script>
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slideA");
+    }
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+  });
+});
+</script>
+</head>
+<body>
+<!---------------------------------------------------------------->
+<nav class="navbar navbar-default " style="background-color:black">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">YOU NEED NGO</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="newStart.html">HOME</a></li>
+        <li><a href="#band">EVENTS</a></li>
+        <li><a href="#tour">DONATE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ACTIVITIES</a></li>
+            <li><a href="#">GET INVOLVED</a></li>
+            <li><a href="#">ABOUT US</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!---------------------------------------------------------------->
+	<!----------------------------------------------------------------->
+	<div id="googleMap"></div>
+	<!----------------------------------------------------------------->
+
+<div class="container">
+    <div class="row">
+		<div class="panel panel-default">
+			<div class="panel-body">Contact us <small>Feel free to contact us</small></div>
+		</div>
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+							<input type="text" class="form-control" id="subject" placeholder="Enter subject" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span>&nbsp;Our office</legend>
+            <address>
+                <strong>Head Office</strong><br>
+                Nirma University, Opp. SGVP School, S.G<br>
+                Highway, Ahmedabad-382481<br>
+                <span class="glyphicon glyphicon-phone"></span>Phone: +91-9408377842
+            </address>
+            <address>
+                <span class="glyphicon glyphicon-envelope"></span>Email: 14bce133@nirmauni.ac.in			
+            </address>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------------------------------------>
+<footer class="text-center" style="background-color:black">
+<div class="row" >
+
+  <div style="display:block">
+  <div class="test">
+    <div class="col-md-3"style="background-color:;margin-top:0.5%">
+      <h3> Contact for help</h3>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Nirma University, Opp. SGVP School, S.G. Highway, Ahmedabad-382481</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +91-9408377842</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: 13bme062@nirmauniac.in</p> 
+	  <div>
+     </div>
+    </div>
+	<div class="col-md-4" style="display:block;background-color:">
+	 <h3>Gallery</h3>
+	 <div style="width:100%">
+       <img src="http://seattle-bootstrap3-website-template.little-neko.com/v1/images/theme-pics/works2.jpg" style="display:thumbnail;heigth:13%;width:18%;padding: 0px 2px 2px 0px  ">
+	   <img src="http://seattle-bootstrap3-website-template.little-neko.com/v1/images/theme-pics/works1.jpg" style="display:thumbnail;heigth:13%;width:18%;padding: 0px 2px 2px 0px  ">
+	   <img src="http://s2.dmcdn.net/SSk2M/60x60-irc.jpg" style="display:thumbnail;heigth:13%;width:18%;padding:0px 2px 2px 0px ">
+	   <br>
+	   <img src="http://seattle-bootstrap3-website-template.little-neko.com/v1/images/theme-pics/works2.jpg" style="display:thumbnail;heigth:13%;width:18%;padding: 2px 2px 2px 0px ">
+	   <img src="http://seattle-bootstrap3-website-template.little-neko.com/v1/images/theme-pics/works1.jpg" style="display:thumbnail;heigth:13%;width:18%;padding:2px 2px 2px 0px  ">
+	   <img src="http://s2.dmcdn.net/SSk2M/60x60-irc.jpg" style="display:thumbnail;heigth:13%;width:18%;padding:2px 2px 2px 0px ">
+	 </div>
+	</div>
+	 <div class="col-md-3" style="text-align:left;margin-top:0.3%;background-color:">
+	 <h3>Subscribe</h3>
+	 <br>
+	 <form role="form">
+	   <div class="form-group">
+          <input class="form-control " id="subscribe" name="subscribe" placeholder="Email" type="email" required style="width:70%">
+		  <br>
+		  <button class="btn pull-left" type="submit" >Send</button>
+        </div>
+     </form>  
+	 </div>
+	 <div class="col-md-2" style="background-color:;right:5%">
+      <div style="float:right;display:block" data-toggle="tooltip" title="TO TOP">
+        <a class="up-arrow" href="#myPage"  style="float:right">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p><a href="#" data-toggle="tooltip" title="YOU NEED NGO">YOUNEED NGO</a></p> 
+	
+		<img src="C:\Users\Yuvraj Singh.YUVRAJSINGH\Desktop\Minor Project\image-overlay-hover-effects-source\youneed.jpg" alt="youneed logo" style="display:thumbnail;float:right">
+  </div>
+  </div>
+  
+  </div >
+</script>
+
+</div>
+</div>
+</div>
+</footer>
+
+<div style="background-color: #1a1a1a;padding-top:2%;padding-bottom:2%">
+ <div class="text-center" >
+  
+   <i class="fa fa-google-plus jcon social" style="font-size:30px ;padding:0px 5px 0px 5px;color:white " class="">  </i>
+   <i class="fa fa-facebook-official jcon social" style="font-size:30px;padding:0px 5px 0px 5px ;color:white "></i>
+   <i class="fa fa-twitter jcon social" style="font-size:30px;padding:0px 5px 0px 5px  ;color:white ">
+   </i>  
+   <i class="fa fa-youtube jcon social" style="font-size:30px;padding:0px 5px 0px 5px  ;color:white "></i>
+    <i class="fa fa-linkedin jcon social" style="font-size:30px;padding:0px 5px 0px 5px  ;color:white "></i>
+     <br>
+	 <br>
+<p><span style="color:white">Copyright © 2016-2017 Design and Developed</span> <span style="color:blue">[ ystanwar ]</span></p>
+    </div>
+</div>
+
+
+</body>
+</html>

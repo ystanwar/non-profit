@@ -1,0 +1,129 @@
+<html>
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <script type= "text/javascript" src = "countries.js"></script>  
+	 
+	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  
+	  <script>
+  $(document).ready(function() {
+    $("#datepicker").datepicker();
+  });
+  </script>
+</head>
+<style>
+ 
+   .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+   }
+
+
+    .btn:hover, .btn:focus {
+       border: 1px solid #333;
+       background-color: #fff;
+       color: #000;
+   }
+   
+   modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 90px;
+  }
+
+   .modal-header, .modal-body {
+    padding: 40px 50px;
+ }
+</style>
+<body>
+	   <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Donate</button>
+	     <div class="modal fade" id="myModal" role="dialog">
+		   <div class="modal-dialog">
+		     <div class="modal-content">
+			   <div class="modal-header" >
+				   <button type="button" class="close" data-dismiss="modal">&times;</button>
+				     <h4><span class="glyphicon glyphicon-lock"></span> Donate</h4>
+				</div>
+				<div class="modal-body">
+				  <form role="form">
+				         <div class="form-group">
+                           <label for="name"><span class="glyphicon glyphicon-user"></span> Enter your name</label>
+                             <input type="text" class="form-control" id="name" placeholder="Full name" required>
+                         </div>
+						 <div class="form-group">
+						     <label for="email"><span class="glyphicon glyphicon-envelope"></span> Enter your email</label>
+                             <input type="text" class="form-control" id="email" placeholder="valid email id" required>
+                         </div>
+						 <div class="form-group">
+						     <label for="Phone number"><span class="glyphicon glyphicon-phone"></span> Enter your phone no</label>
+                             <input type="number" class="form-control" id="Phone" placeholder="valid phone number" required>
+                         </div>
+						 <div class="form-group">
+						     <label for="Address"><span class="glyphicon glyphicon-home"></span> Enter your address</label>
+                             <input type="text" class="form-control" id="address" placeholder="valid email address">
+                         </div>
+                         
+					<!-------------------------->
+					
+					      <div class="form-group">
+						  <label for="Country"><span class="glyphicon glyphicon-globe"></span> Choose you country</label>
+                           <select id="country" class="form-control"name ="country"></select>
+                                <script language="javascript">
+                                  populateCountries("country");
+                                </script>
+					     </div>
+					<!---------------------------->
+					<div class="form-group">
+					  <label for="D.O.B"><span class="glyphicon glyphicon-calendar"></span> Data Of Birth </label>
+			          <input id="datepicker" class="form-control" placeholder="Click here to select date from calendar"/>
+		             </div>
+					
+					<!---------------------------->
+					
+							<div class="form-group">
+                           <label for="PAN"><span class="glyphicon glyphicon-record"></span> PAN</label>
+                             <input type="text" class="form-control" id="PAN" placeholder="PAN" required>
+                         </div>
+						 <!-------------------------->
+                    <div class="form-group">
+					<label for="Gender"><span class="glyphicon glyphicon-user"><Strong>Gender</strong></span></label>
+                       <div class="radio">
+                        <label><input type="radio" name="optradio"><span><Strong>Male</strong></span></label>
+                          </div>
+                        <div class="radio">
+                        <label><input type="radio" name="optradio"><Strong>Female</strong></span></label>
+                         </div>
+					</div>   
+					   
+					<div class="form-group">
+                           <label for="amnt"><span class="glyphicon glyphicon-thumbs-up"></span> Enter Amount </label>
+                             <input type="number" class="form-control" id="amnt" placeholder="Enter amount in INR">
+                         </div>
+						 	
+							<!-------------------------------->
+                         <button type="submit" class="btn btn-block">Donate
+                           <span class="glyphicon glyphicon-ok"></span>
+                         </button>
+				  </form>
+				 </div>
+			  <div class="modal-footer">
+                 <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span> Cancel
+                  </button>
+                  <p>Need <a href="#">help?</a></p>
+              </div>
+			  
+		 
+		 </div>
+	 </div>
+</body>
+</html>
